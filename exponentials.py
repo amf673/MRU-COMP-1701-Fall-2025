@@ -53,7 +53,7 @@ def main() -> None:
    folded_thickness = doubling(PAPER_THICKNESS, 100)
    folded_km = folded_thickness / M_PER_KM
    folded_au = folded_thickness / M_PER_AU 
-   folded_ly = folded_thicness / M_PER_LY
+   folded_ly = folded_thickness / M_PER_LY
 
    print( f"The folded paper will be {folded_thickness:,.2f} m, {folded_km:,.2f} km, {folded_au:,.2f} AU, or {folded_ly:,.2f} LY")
     
