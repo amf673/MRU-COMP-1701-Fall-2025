@@ -13,6 +13,7 @@ EAST = 0
 WEST = 180 
 NORTH = 90 
 SOUTH = 270
+
 COLOURS = ["red", "green", "blue", "yellow", "orange", "wheat", "turquoise"]
 
 MENU = "1. Draw a square\n2. Draw a Circle\n3. Draw a Hexagon\n4. Exit\n"
@@ -78,24 +79,8 @@ def main():
     otto.pensize(5)
 
     print( MENU)
-    command = int(input("Enter what you want to do: "))
-    if command > 0 and command < 4: 
-        col = input("Enter the colour (red,green,blue,turquoise): "))
-    if command == 1: 
-        square(otto, 100, 0, 0,col)
-    elif command == 2: 
-        circ(otto, 225, 0, -100, col,True)
-    elif command == 3:
-        polygon( otto, 0, 0, 200, 6,col)
-    elif command == 4:
-        exit()
-    else:
-        length = r.randint(50,200)
-        sides = r.randint(3,12)
-        col = rand_colour()
-        print( length, sides, col)
-        polygon(otto, 0,0, length, sides, col)
-        
+    # processing goes here 
     t.exitonclick()
 
 main()
+
