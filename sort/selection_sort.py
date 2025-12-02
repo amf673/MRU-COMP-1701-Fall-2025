@@ -10,10 +10,10 @@ def selection_sort( alist:list) -> None:
             if alist[j] <= alist[min]:
                 # found a new smallest! 
                 min = j
-            # swap 
-            temp = alist[i]
-            alist[i] = alist[min]
-            alist[min] = temp
+        # swap 
+        temp = alist[i]
+        alist[i] = alist[min]
+        alist[min] = temp
 
 a = [3,4,2,1,8,5,6,7,32,4,4]
 selection_sort(a)
