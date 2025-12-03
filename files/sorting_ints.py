@@ -9,6 +9,7 @@ def read_file( file:str) -> list:
     
     int_list = []
     input_file = open(file, "r")
+    
     line = input_file.readline()
     while line != "":
         line_list = line.strip().split()
@@ -16,16 +17,21 @@ def read_file( file:str) -> list:
             int_list.append( int( line_list[i]))
         line = input_file.readline()
         
+    input_file.close()
+        
     return int_list
 
 def save_file( file:str, ints:list) -> None:
     """ Write the list of ints to a file with no more than 10 ints per line
     """
+    
     output_file = open( file, "w")
+    
     for i in range( 1, len( ints) + 1):
         output_file.write( f"{ints[ i-1]:4} ") 
         if (i % 10 == 0):
             output_file.write( "\n")
+            
     output_file.close()
 
 def selection_sort( alist:list) -> None:
